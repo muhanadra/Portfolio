@@ -144,42 +144,50 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         "home": [{
             "title": "Skills",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "search"
         },
         {
             "title": "Contact",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "mail"
         },
         {
             "title": "About",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "search"
         },
         {
             "title": "Projects",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "action:grade"
         },
         {
             "title": "Frogger",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "search"
         },
         {
             "title": "Blog Posts",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "search"
         },
         {
             "title": "Services",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "search"
         },
         {
             "title": "Blog Posts",
             "imgSrc": "img/scene01.jpg",
-            "link": "Add link here"
+            "link": "Add link here",
+            "icon": "search"
         }]
     }
   ];
@@ -223,7 +231,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       $('.category-list').css('overflow', 'hidden');
     }
   };
-  $(window).on('hashchange', alignItem);
+  alignItem();
   $(window).resize(alignItem);
 
   // See https://github.com/Polymer/polymer/issues/1381

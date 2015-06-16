@@ -56,19 +56,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="elements/elements.html">
   <!-- endreplace-->
 
-   <!-- Social media icons element -->
-  <link rel="import" href="/bower_components/iron-icons/socialmedia-icons.html">
-  <link rel="import" href="/bower_components/iron-icons/communication-icons.html">
-
-
-
 </head>
 
 <body unresolved class="fullbleed layout vertical">
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
 
-    <paper-drawer-panel id="paperDrawerPanel" forceNarrow narrow>
+    <paper-drawer-panel id="paperDrawerPanel" force-narrow>
       <div drawer narrow>
 
         <!-- Drawer Toolbar -->
@@ -84,27 +78,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Drawer Content -->
           <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
-               <a data-route="home" href="/">
+               <a data-route="home" href="./">
                 <iron-icon icon="home"></iron-icon>
                 <span>Home</span>
               </a>
 
-              <a data-route="projects" href="/projects">
+              <a data-route="projects" href="./projects">
                 <iron-icon icon="info"></iron-icon>
                 <span>Projects</span>
               </a>
 
-              <a data-route="games" href="/games">
+              <a data-route="games" href="./games">
                 <iron-icon icon="info"></iron-icon>
                 <span>Games</span>
               </a>
 
-              <a data-route="skills" href="/skills">
+              <a data-route="skills" href="./skills">
                 <iron-icon icon="info"></iron-icon>
                 <span>Skills</span>
               </a>
 
-              <a data-route="contact" href="/contact">
+              <a data-route="contact" href="./contact">
                 <iron-icon icon="mail"></iron-icon>
                 <span>Contact</span>
               </a>
@@ -117,7 +111,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
           <!-- Application name -->
           <div>
-            <a class="custom-link" href="">
+            <a class="custom-link" href="./">
               <div class="paper-font-display1 appname">Muhanad Rabie</div>
               <div class="subtitle">Front-end Developer</div>
             </a>
@@ -147,10 +141,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div class="category-list">
               <template is="dom-repeat" items="{{home}}">
                 <div class="category-item">
-                  <paper-material elevation="0" class="item wide " layout vertical flex>
-                    <iron-icon icon="check-box" class="icon-larger"></iron-icon>
+                  <paper-material elevation="0" class="item wide custom-color {{item}} " layout vertical flex>
+                    <iron-icon icon="{{item.icon}}" class="icon-larger"></iron-icon>
                     <paper-button>
-
                         <a class="custom-link" href="{{item.title}}">
                           <div class="category-info">
                             <h3 class="category-title">{{item.title}}</h3>
