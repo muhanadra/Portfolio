@@ -77,9 +77,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     color: white;
   }
 
-  .social-icons {
-    margin: 12px;
-  }
 
   .category-list{
     display: flex;
@@ -301,6 +298,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding: 48px 62px;
     }
 
+    .toggle-social {
+      display: none;
+    }
+
+  }
+  /* Small devices */
+  @media (max-width: 601px) {
+    .social-block {
+      position: relative;
+    }
+    .social-icons {
+      display: block;
+      text-decoration: none;
+    }
+    .social-wrapper {
+      position: absolute;
+      right: 0;
+      background-color: #00BCD4;
+      z-index: 3;
+      top: 48px;
+      display: none;
+    }
   }
 
   /* Material Design Adaptive Breakpoints */

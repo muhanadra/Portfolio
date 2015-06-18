@@ -36,6 +36,15 @@ body {
   will-change: transform;
 }
 
-.white {
-	color: white;
+.social-block {
+	display: flex;
+}
+
+.social-icons {
+    margin: 12px;
+    display: inline-block;
+}
+
+.hidden {
+	display: none;
 }

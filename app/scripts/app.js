@@ -213,7 +213,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.addEventListener('dom-change', function() {
     console.log('Our app is ready to rock!');
     setTimeout(alignItem, 100);
+    toggleSocialMenu();
+    hideSocialMenu();
   });
+
+
+  function toggleSocialMenu() {
+    $('.toggle-social').on('click', function(){
+        console.log('icon clicked!');
+        $('.social-wrapper').toggle();
+      });
+  }
+
+  function hideSocialMenu() {
+    if ($('.social-icons').css('display') == 'block') {
+      $('.social-wrapper').hide();
+    }
+    else {
+      $('.social-wrapper').show();
+    }
+  }
+  $(window).resize(hideSocialMenu);
+
   var alignItem = function() {
     var targetedItem = '.category-item:nth-child(7)';
     var regItem = '.category-item:nth-child(2)';
@@ -231,8 +252,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       $('.category-list').css('overflow', 'hidden');
     }
   };
-  alignItem();
+  setTimeout(alignItem, 100);
   $(window).resize(alignItem);
+
 
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {
