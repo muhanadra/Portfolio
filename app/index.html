@@ -41,6 +41,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- Import jQuery-->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Import Bootstrap -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- Tile icon for Win8 (144x144) -->
   <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
 
@@ -81,6 +84,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                <a data-route="home" href="./">
                 <iron-icon icon="home"></iron-icon>
                 <span>Home</span>
+              </a>
+
+              <a data-route="services" href="./services">
+                <iron-icon icon="info"></iron-icon>
+                <span>Services</span>
               </a>
 
               <a data-route="projects" href="./projects">
@@ -159,7 +167,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                             <p>{{item.description}}</p>
                           </div>
                         </a>
-
                     </paper-button>
                   </paper-material>
                 </div>
@@ -167,19 +174,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </div>
             </section>
 
-            <section data-route="projects">
+            <section data-route="projects" class="row subcat-list">
+              <h2>Projects</h2>
               <template is="dom-repeat" items="{{projects}}">
-                <paper-material elevation="1" class="">
-                  <h2>{{item.title}}</h2>
-                  <p>{{item.description}}</p>
-                  <h3>Key Skills</h3>
-                  <!-- TODO create Auto-binding-->
-                  <ul >
-                    <template is="dom-repeat" items="{{item.bp}}">
-                    <li>{{item}}</li>
-                    </template>
-                  </ul>
-                </paper-material>
+                <div class="col-md-6">
+                  <paper-material elevation="1" class="subcat-item">
+                    <h2>{{item.title}}</h2>
+                    <p>{{item.description}}</p>
+                    <h3>Key Skills</h3>
+                    <!-- TODO create Auto-binding-->
+                    <ul >
+                      <template is="dom-repeat" items="{{item.bp}}">
+                      <li>{{item}}</li>
+                      </template>
+                    </ul>
+                  </paper-material>
+                </div>
               </template>
             </section>
 

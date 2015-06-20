@@ -48,3 +48,11 @@ body {
 .hidden {
 	display: none;
 }
+
+.col-3 {
+  width: 31.33333%;
+}
+
+.subcat-item {
+  height: 300px;
+}
