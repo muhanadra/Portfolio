@@ -9,30 +9,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 (function(document) {
   'use strict';
-  //TODO replace myData variables with a JQUERY $.getJSON request
+  //TODO replace myData variable with a JQUERY $.getJSON request
   var myData = [
     {
       "projects": [{
-            "title": "Feedreader Unit testing",
+            "title": "Feedreader Unit Testing",
             "link": "github.com",
             "github": "github.com/neo0rabie",
-            "imgSrc": "img/scene01.jpg",
-            "bp": ["Test Driven Development", "Unit testing", "Google Reader API", "Jasmine"],
+            "imgSrc": "images/feedreader.png",
+            "bp": ["Test Driven Development", "Unit Testing", "Google Reader API", "Jasmine"],
             "description": "A web-based application that reads RSS feeds using Google Feed API, This application is part of Udacity Front-end nano-degree program. As A student I wrote all the required tests to test the funactionality of this app using Jasmine liberary"
         },
         {
             "title": "Filming locations",
             "link": "github.com",
             "github": "github.com/neo0rabie",
-            "imgSrc": "img/scene01.jpg",
+            "imgSrc": "images/location.png",
             "bp": ["Google Map Api", "KnockOut liberary", "Data Binding", "Javascript Design Patterns", "Seperation of concern", "MVC"],
-            "description": "An Application that uses Google Map Api to show the filming locations of some of my favorite movies"
+            "description": "An Application that uses Google Maps Api to show the filming locations of Richard Linklater Before Sunrise trilogy."
         },
         {
             "title": "Frogger Arcade Game",
             "link": "github.com",
             "github": "github.com/neo0rabie",
-            "imgSrc": "img/scene01.jpg",
+            "imgSrc": "images/frogger.png",
             "bp": ["Object Oriented Programming", "Git", "HTML5 Canvas"],
             "description": "A remake of the classic arcade game to test my skills in Object Oriented Programming as part of Udacity Front-end nano-degree program"
         },
@@ -40,7 +40,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "Mobile Website Optimization",
             "link": "Shakespeare and Company",
             "github": "I just want to see if you're going to Dissolve into molecules.",
-            "imgSrc": "img/scene01.jpg",
+            "imgSrc": "images/udacity.png",
             "bp": ["Web Optimization", "Critical Rendering Path", "Optimize JavaScript Execution", "Simplify paint complexity and reduce paint areas"],
             "description": "A Mobile Portfolio, Optimized to have a score of 96 in Google PageSpeed, and a framerate of 60hz for animation"
         },
@@ -48,8 +48,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "Azm Technologies",
             "link": "Shakespeare and Company",
             "github": "I just want to see if you're going to Dissolve into molecules.",
-            "imgSrc": "img/scene01.jpg",
-            "description": "Jesse in his final destination in his book tour, Which happens to be Celine best Bookstore in Paris, The Universe must be conspiraying to bring this too together. They just don't know it."
+            "imgSrc": "images/azm.png",
+            "status": "Under Development",
+            "description": "AZM is an Innovative IT Saudi company That provides professional IT services in the Fields of networking infrastructure, Data Center and DRC solutions, Security, Software Development, Integration, Consultation and Manpower Supply."
         }]
     },
     {
@@ -58,6 +59,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
             "github": "Beginner",
             "imgSrc": "img/scene01.jpg",
+            "status": "Under Development",
             "description": "1-A fair description of the scene and why you personally connect with it"
         },
         {
@@ -65,6 +67,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
             "github": "Beginner",
             "imgSrc": "img/scene01.jpg",
+            "status": "New",
             "description": "1-A fair description of the scene and why you personally connect with it"
         },
         {
@@ -72,6 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
             "github": "Beginner",
             "imgSrc": "img/scene01.jpg",
+            "status": "Under Development",
             "description": "1-A fair description of the scene and why you personally connect with it"
         }]
     },
@@ -80,63 +84,96 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "Javascript",
             "Year": "2012",
             "level": "Very Good",
-            "imgSrc": "img/scene01.jpg",
+            "class": "cc-symbol cc-symbol-icon-javascript",
+            "imgSrc": "img/javascript.jpg",
             "description": "Celine give Jesse the finger"
         },
         {
-            "title": "Drupal",
-            "Year": "2012",
-            "level": "Very Good",
-            "imgSrc": "img/scene01.jpg",
-            "description": "Celine give Jesse the finger"
-        },
-        {
-            "title": "HTML",
+            "title": "HTML5",
             "Year": "2011",
             "level": "Very Good",
-            "imgSrc": "img/scene01.jpg",
+            "class": "cc-symbol cc-symbol-icon-html",
+            "imgSrc": "img/html.jpg",
             "description": "Celine give Jesse the finger"
         },
         {
-            "title": "CSS",
+            "title": "CSS3",
             "Year": "2011",
             "level": "Very Good",
-            "imgSrc": "img/scene01.jpg",
+            "class": "cc-symbol cc-symbol-icon-css",
+            "imgSrc": "img/css3.jpg",
             "description": "Celine give Jesse the finger"
         },
         {
             "title": "PHP",
             "Year": "2012",
             "level": "Beginner",
-            "imgSrc": "img/scene01.jpg",
+            "class": "cc-symbol cc-symbol-icon-php",
+            "imgSrc": "img/php.jpg",
             "description": "Celine give Jesse the finger"
         },
         {
             "title": "Python",
             "Year": "2014",
             "level": "Beginner",
-            "imgSrc": "img/scene01.jpg",
+            "class": "cc-symbol cc-symbol-icon-python",
+            "imgSrc": "img/python.jpg",
             "description": "Celine give Jesse the finger"
         },
         {
             "title": "Polymer",
             "Year": "2014",
             "level": "Good",
-            "imgSrc": "img/scene01.jpg",
+            "icon": "polymer",
+            "imgSrc": "img/polymer.jpg",
+            "description": "Celine give Jesse the finger"
+        },
+        {
+            "title": "Angular JS",
+            "Year": "2014",
+            "level": "Good",
+            "imgIcon": "images/angularjs.svg",
+            "imgSrc": "images/angularjs.svg",
+            "description": "Celine give Jesse the finger"
+        },
+        {
+            "title": "Drupal",
+            "Year": "2012",
+            "level": "Very Good",
+            "class": "fa fa-drupal",
+            "imgSrc": "img/drupal.jpg",
             "description": "Celine give Jesse the finger"
         },
         {
             "title": "Git",
             "Year": "2014",
             "level": "Good",
-            "imgSrc": "img/scene01.jpg",
+            "class": "fa fa-git-square",
+            "imgSrc": "img/git.jpg",
+            "description": "Celine give Jesse the finger"
+        },
+        {
+            "title": "Gulp",
+            "Year": "2014",
+            "level": "Good",
+            "imgIcon": "images/gulp.svg",
+            "imgSrc": "img/git.jpg",
+            "description": "Celine give Jesse the finger"
+        },
+        {
+            "title": "Adobe Illustrator",
+            "Year": "2014",
+            "level": "Good",
+            "imgIcon": "images/illustrator.svg",
+            "imgSrc": "img/git.jpg",
             "description": "Celine give Jesse the finger"
         },
         {
             "title": "Adobe Photoshop",
             "Year": "2006",
-            "level": "Beginner",
-            "imgSrc": "img/scene01.jpg",
+            "level": "Very Good",
+            "imgIcon": "images/photoshop.svg",
+            "imgSrc": "img/photoshop.jpg",
             "description": "Celine give Jesse the finger"
         }]
     },
@@ -145,7 +182,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "Skills",
             "imgSrc": "img/scene01.jpg",
             "link": "Add link here",
-            "icon": "search"
+            "icon": "code"
         },
         {
             "title": "Contact",
@@ -157,37 +194,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "About",
             "imgSrc": "img/scene01.jpg",
             "link": "Add link here",
-            "icon": "search"
+            "icon": "account-circle"
         },
         {
             "title": "Projects",
             "imgSrc": "img/scene01.jpg",
             "link": "Add link here",
-            "icon": "action:grade"
+            "icon": "work"
+        },
+        {
+            "title": "Games",
+            "imgSrc": "img/scene01.jpg",
+            "link": "Add link here",
+            "icon": "hardware:gamepad"
         },
         {
             "title": "Frogger",
             "imgSrc": "img/scene01.jpg",
             "link": "Add link here",
-            "icon": "search"
-        },
-        {
-            "title": "Blog Posts",
-            "imgSrc": "img/scene01.jpg",
-            "link": "Add link here",
-            "icon": "search"
+            "icon": "bug-report"
         },
         {
             "title": "Services",
             "imgSrc": "img/scene01.jpg",
             "link": "Add link here",
-            "icon": "search"
+            "icon": "gesture"
         },
         {
             "title": "Blog Posts",
             "imgSrc": "img/scene01.jpg",
             "link": "Add link here",
-            "icon": "search"
+            "icon": "create"
         }]
     }
   ];
@@ -202,7 +239,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.games = myData[1]['games'];
   app.skills = myData[2]['skills'];
   app.home =  myData[3]['home'];
-  //$('.category-list').css('display', 'none');
 
   app.displayInstalledToast = function() {
     document.querySelector('#caching-complete').show();
@@ -215,6 +251,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     setTimeout(alignItem, 100);
     toggleSocialMenu();
     hideSocialMenu();
+    setTimeout(setHeight, 100);
   });
 
 
@@ -254,6 +291,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   setTimeout(alignItem, 100);
   $(window).resize(alignItem);
+
+    // Make sure all .sub-item have the same height
+    function setHeight() {
+        var heights = [];
+        $('.subcat-item').each(function () {
+            heights.push($(this).height());
+        });
+        var maxheight =  Math.max.apply( Math, heights );
+        //$('.subcat-item').height( maxheight);
+        console.log("height changed" + maxheight);
+
+    }
+    $(window).resize(setHeight);
 
 
   // See https://github.com/Polymer/polymer/issues/1381

@@ -23,7 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   :root {
     --dark-primary-color: #0097A7;
-    --default-primary-color: #00BCD4;
+    --default-primary-color: #204156;
     --light-primary-color: #B2EBF2;
     --text-primary-color: #ffffff; /*text/icons*/
     --accent-color: #FF4081;
@@ -83,8 +83,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     display: -ms-flexbox;
     display: -webkit-flex;
     flex-wrap: wrap;
-    padding: 4px 0;
-    margin: 2px -4px 0 -4px;
+    padding: 8px 0 0 8px;
+    background-color: #3C3C3C;
   }
 
   .item {
@@ -96,13 +96,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     border-radius: 0px;
   }
 
-
+  .item-title {
+    display: inline-flex;
+  }
   .icon-larger {
     width: 80%;
     height: 75%;
     margin: auto;
     align-items: center;
     display: flex;
+  }
+  .lg-icon {
+    width: 13em;
+    height: 13em;
   }
 
   .category-info {
@@ -127,15 +133,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .category-item paper-material {
-    /*background-color: var(--accent-color);*/
+    background-color: var(--default-primary-color);
+    -webkit-transition-duration: 700ms;
+    -moz-transition-duration: 700ms;
+    -o-transition-duration: 700ms;
+    transition-duration: 700ms;
+    transform-origin: top;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    will-change: transform;
   }
+
+  .category-item:hover {
+    z-index: 99999;
+  }
+
+  .category-item paper-material:hover {
+    @apply(--shadow-elevation-16dp);
+    background-color: var(--light-primary-color);
+  }
+
   .category-item:nth-child(1) paper-material .category-info {
     background-color: #009688;
     color: #fff;
   }
 
-  .category-item:nth-child(1) {
+  .category-item:nth-child(1) paper-material {
     color: #009688;
+    transform-origin: top left;
   }
 
   .category-item:nth-child(2) paper-material .category-info {
@@ -159,40 +186,74 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     background-color: #2196F3;
     color: #fff;
   }
-  .category-item:nth-child(4) {
+  .category-item:nth-child(4) paper-material {
     color: #2196F3;
+    transform-origin: top right;
   }
   .category-item:nth-child(5) paper-material .category-info {
     background-color: #536DFE;
     color: #fff;
   }
-  .category-item:nth-child(5) {
+  .category-item:nth-child(5) paper-material {
     color: #536DFE;
+    transform-origin: bottom left;
   }
   .category-item:nth-child(6) paper-material .category-info {
     background-color: #F44336;
     color: #fff;
   }
-  .category-item:nth-child(6) {
+  .category-item:nth-child(6) paper-material {
     color: #F44336;
+    transform-origin: bottom;
   }
   .category-item:nth-child(7) paper-material .category-info {
     background-color: #D32F2F;
     color: #fff;
   }
-  .category-item:nth-child(7) {
+  .category-item:nth-child(7) paper-material {
     color: #D32F2F;
+    transform-origin: bottom;
   }
   .category-item:nth-child(8) paper-material .category-info {
     background-color: #FF9800;
     color: #fff;
   }
-  .category-item:nth-child(8) {
+  .category-item:nth-child(8) paper-material {
     color: #FF9800;
+    transform-origin: bottom right;
+  }
+
+  .page-header {
+    display: inline-flex;
+    width: 100%;
+    color: var(--default-primary-color);
+    padding: 0 10px;
+  }
+  .page-header h2 {
+    margin: 0;
+  }
+  .subcat-item p{
+    line-height: 25px;
+    height: 75px;
+    overflow: hidden;
+  }
+
+  .min-height {
+    min-height: 363px;
   }
 
   .subcat-item {
-    height: 320px;
+    text-align: center;
+    color: var(--default-primary-color);
+  }
+  .subcat-item i {
+    font-size: 128px
+  }
+
+  .center {
+    display: block;
+    margin: auto;
+    text-align: center;
   }
 
   paper-material {
@@ -251,6 +312,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }*/
 
   /* Breakpoints */
+  /* Extra Small */
 
   /* Small */
   @media (max-width: 600px) {
@@ -266,8 +328,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       font-size: 12px;
     }
 
-    .app-name {
-      font-size: 26px;
+    .appname {
+      font-size: 24px;
+      text-overflow: ellipsis;
     }
 
     #drawer .paper-toolbar {
@@ -283,12 +346,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
   }
+   @media (max-width: 364px) {
+    .appname {
+      font-size: 18px;
+      text-overflow: ellipsis;
+    }
+  }
 
   /* Tablet+ */
   @media (min-width: 601px) {
 
     paper-material {
-      width: calc(98% - 46px);
+      width: calc(98%);
       margin-bottom: 32px;
       padding-left: 30px;
       padding-right: 30px;
@@ -299,7 +368,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     iron-pages {
-      padding: 48px 62px;
+      padding: 4px 62px;
     }
 
     .toggle-social {
@@ -311,6 +380,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   @media (max-width: 601px) {
     .social-block {
       position: relative;
+      padding: 0 0 0 10px;
     }
     .social-icons {
       display: block;
@@ -319,7 +389,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     .social-wrapper {
       position: absolute;
       right: 0;
-      background-color: #00BCD4;
+      background-color: var(--default-primary-color);
       z-index: 3;
       top: 48px;
       display: none;
@@ -373,6 +443,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     width: calc(100%/3);
   }
 
+  .category-item paper-material:hover {
+    @apply(--shadow-elevation-16dp);
+    background-color: var(--light-primary-color);
+    -ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2); /* Standard syntax */
+  }
+
 }
 /* desktop-small */
 @media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) {
@@ -401,6 +479,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   .category-item:nth-child(8) {
     width: calc(100%/3);
   }
+  .category-item paper-material:hover {
+    @apply(--shadow-elevation-16dp);
+    background-color: var(--light-primary-color);
+    -ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2); /* Standard syntax */
+  }
 }
 /* desktop-medium */
 @media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) {
@@ -415,6 +500,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   .category-item:nth-child(1), .category-item:nth-child(4), .category-item:nth-child(7) {
     height: calc(100% / 3 * 2);
     width: calc(100%/3);
+  }
+
+  .category-item paper-material:hover {
+    @apply(--shadow-elevation-16dp);
+    background-color: var(--light-primary-color);
+    -ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2); /* Standard syntax */
   }
 
 }
@@ -435,6 +528,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   .category-item:nth-child(8) {
     width: calc(100%/3);
   }
+  .category-item paper-material:hover {
+    @apply(--shadow-elevation-16dp);
+    background-color: var(--light-primary-color);
+    -ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2); /* Standard syntax */
+  }
 }
 /* desktop-xlarge */
 @media all and (min-width: 1601px) and (min-width: 1920px) {
@@ -452,6 +552,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   .category-item:nth-child(8) {
     width: calc(100%/3);
+  }
+  .category-item paper-material:hover {
+    @apply(--shadow-elevation-16dp);
+    background-color: var(--light-primary-color);
+   -ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2); /* Standard syntax */
   }
 }
 </style>

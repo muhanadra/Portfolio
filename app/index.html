@@ -15,7 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Polymer Starter Kit" />
+  <meta name="generator" content="Muhanad's Portfolio" />
   <title>Muhanad Rabie</title>
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -43,6 +43,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Import Bootstrap -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Import Openwebfonts-->
+  <link rel="stylesheet" type="text/css" href="styles/openwebicons-bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- Tile icon for Win8 (144x144) -->
   <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
@@ -92,17 +95,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </a>
 
               <a data-route="projects" href="./projects">
-                <iron-icon icon="info"></iron-icon>
+                <iron-icon icon="work"></iron-icon>
                 <span>Projects</span>
               </a>
 
               <a data-route="games" href="./games">
-                <iron-icon icon="info"></iron-icon>
+                <iron-icon icon="hardware:gamepad"></iron-icon>
                 <span>Games</span>
               </a>
 
               <a data-route="skills" href="./skills">
-                <iron-icon icon="info"></iron-icon>
+                <iron-icon icon="code"></iron-icon>
                 <span>Skills</span>
               </a>
 
@@ -133,10 +136,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <ul class="social-block">
             <iron-icon  icon="more-vert" class="social-icons toggle-social"></iron-icon></li>
             <div id="social" class="social-wrapper">
-              <li class="social-icons"><iron-icon  icon="socialmedia:github"></iron-icon></li>
-              <li class="social-icons"><iron-icon  icon="socialmedia:linkedin"></iron-icon></li>
-              <li class="social-icons" ><iron-icon icon="socialmedia:jsfiddle"></iron-icon></li>
-              <li class="social-icons"><iron-icon  icon="socialmedia:twitter"></iron-icon></li>
+              <li class="social-icons"><a class="custom-link" href="https://www.github.com/neo0rabie" target="_blank"><span title="Check my Github repositories"><iron-icon  icon="socialmedia:github"></iron-icon></span></a></li>
+              <li class="social-icons"><a class="custom-link" href="https://www.linkedin.com/in/muhanadabdalla" target="_blank"><span title="Visit my Linkedin profile"><iron-icon  icon="socialmedia:linkedin"></iron-icon></span></a></li>
+              <li class="social-icons"><a class="custom-link" href="https://jsfiddle.net/user/neo0rabie/" target="_blank"><span title="Share your code"><iron-icon icon="socialmedia:jsfiddle"></iron-icon></span></a></li>
+              <li class="social-icons"><a class="custom-link" href="mailto:Muhanadrabie@gmail.com"><iron-icon icon="mail"<span title="Send me an email"></iron-icon></span></a></li>
+              <!-- <li class="social-icons"><a class="custom-link" href="https://www.twitter.com/" target="_blank"><iron-icon  icon="socialmedia:twitter"></iron-icon></a></li> -->
             </div>
           </ul>
           <!-- Application name -->
@@ -152,6 +156,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section class="container" data-route="home">
+              <!-- <neon-animated-pages > -->
+              <!-- id="pages" selected="0" class="x-scope neon-animated-pages-0" -->
               <div class="category-list">
               <template is="dom-repeat" items="{{home}}">
                 <div class="category-item">
@@ -172,48 +178,87 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
               </template>
               </div>
+             <!--  </neon-animated-pages> -->
             </section>
 
             <section data-route="projects" class="row subcat-list">
-              <h2>Projects</h2>
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Projects</h2></div>
               <template is="dom-repeat" items="{{projects}}">
                 <div class="col-md-6">
-                  <paper-material elevation="1" class="subcat-item">
-                    <h2>{{item.title}}</h2>
+                  <paper-material elevation="1" class="subcat-item min-height">
+                    <img width="128" class="center" src$="{{item.imgSrc}}">
+                    <h2 class="item-title">{{item.title}}</h2>
+                    <div class="status"><span class="label label-default">{{item.status}}</span></div>
                     <p>{{item.description}}</p>
-                    <h3>Key Skills</h3>
+                  </paper-material>
+                </div>
+              </template>
+            </section>
+
+            <section data-route="services" class="">
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Services</h2></div>
+              <paper-material elevation="1">
+                <h3>Page is under development, Click <a href=''>Here</a> to go back the home page.</h3>
+              </paper-material>
+            </section>
+
+            <section>
+              <h3>Key Skills</h3>
                     <!-- TODO create Auto-binding-->
                     <ul >
                       <template is="dom-repeat" items="{{item.bp}}">
                       <li>{{item}}</li>
                       </template>
                     </ul>
+            </section>
+
+            <section data-route="games" class="row subcat-list">
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Games</h2></div>
+
+              <template is="dom-repeat" items="{{games}}">
+              <div class="col-md-4">
+                  <paper-material elevation="1" class="subcat-item">
+
+                    <img width="128" class="center" src="images/interative-design.svg">
+                    <h2 class="item-title">{{item.title}}</h2>
+                    <div class="status"><span class="label label-default">{{item.status}}</span></div>
+                    <p>{{item.description}}</p>
                   </paper-material>
                 </div>
               </template>
             </section>
 
-            <section data-route="games">
-             <template is="dom-repeat" items="{{games}}">
-                <paper-material elevation="1" class="">
-                  <h2>{{item.title}}</h2>
-                  <p>{{item.description}}</p>
-                </paper-material>
+            <section data-route="skills">
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Skills</h2></div>
+              <template is="dom-repeat" items="{{skills}}">
+              <div class="col-md-4 col-sm-6">
+                  <paper-material elevation="1" class="subcat-item min-height">
+                    <template is="dom-if" if="{{item.class}}">
+                      <i class$="{{ item.class }}"></i>
+                    </template>
+
+                    <template is="dom-if" if="{{item.icon}}">
+                      <iron-icon icon$="{{item.icon}}" class="lg-icon"></iron-icon>
+                    </template>
+
+                    <template is="dom-if" if="{{item.imgIcon}}">
+                      <img width="128" height="128"  src$="{{item.imgIcon}}" class="skill-img">
+                    </template>
+
+                    <h2>{{item.title}}</h2>
+                    <h4>{{item.level}}</h4>
+
+                  </paper-material>
+                </div>
               </template>
             </section>
 
-            <section data-route="skills">
-              <paper-material elevation="1">
-                <h2 class="paper-font-display2">Skills</h2>
-                <p>This is the skills section</p>
-                <a href="/skills/Rob">Rob</a></p>
-              </paper-material>
-            </section>
-
             <section data-route="contact">
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Contact</h2></div>
               <paper-material elevation="1">
                 <h2 class="paper-font-display2">Contact</h2>
                 <p>This is the contact section</p>
+                <span class="cc-symbol cc-symbol-icon-php cc-symbol-icon--large"></span>
               </paper-material>
             </section>
 
