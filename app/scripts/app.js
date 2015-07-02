@@ -221,7 +221,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "icon": "gesture"
         },
         {
-            "title": "Blog Posts",
+            "title": "Blog",
             "imgSrc": "img/scene01.jpg",
             "link": "Add link here",
             "icon": "create"
@@ -290,6 +290,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   setTimeout(alignItem, 100);
   $(window).resize(alignItem);
+  page('/', function () {
+      app.route = 'home';
+      alignItem();
+  });
 
     // Make sure all .sub-item have the same height
     function setHeight() {
