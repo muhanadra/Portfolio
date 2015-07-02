@@ -14,40 +14,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     {
       "projects": [{
             "title": "Feedreader Unit Testing",
-            "link": "github.com",
-            "github": "github.com/neo0rabie",
+            "link": "http://neo0rabie.github.io/frontend-nanodegree-feedreader/",
+            "github": "https://github.com/neo0rabie/frontend-nanodegree-feedreader",
             "imgSrc": "images/feedreader.png",
             "bp": ["Test Driven Development", "Unit Testing", "Google Reader API", "Jasmine"],
             "description": "A web-based application that reads RSS feeds using Google Feed API, This application is part of Udacity Front-end nano-degree program. As A student I wrote all the required tests to test the funactionality of this app using Jasmine liberary"
         },
         {
             "title": "Filming locations",
-            "link": "github.com",
-            "github": "github.com/neo0rabie",
+            "link": "http://neo0rabie.github.io/neighborhood-map/",
+            "github": "https://github.com/neo0rabie/eighborhood-map/",
             "imgSrc": "images/location.png",
             "bp": ["Google Map Api", "KnockOut liberary", "Data Binding", "Javascript Design Patterns", "Seperation of concern", "MVC"],
             "description": "An Application that uses Google Maps Api to show the filming locations of Richard Linklater Before Sunrise trilogy."
         },
         {
             "title": "Frogger Arcade Game",
-            "link": "github.com",
-            "github": "github.com/neo0rabie",
+            "link": "http://neo0rabie.github.io/frontend-nanodegree-arcade-game/",
+            "github": "https://github.com/neo0rabie/frontend-nanodegree-arcade-game",
             "imgSrc": "images/frogger.png",
             "bp": ["Object Oriented Programming", "Git", "HTML5 Canvas"],
             "description": "A remake of the classic arcade game to test my skills in Object Oriented Programming as part of Udacity Front-end nano-degree program"
         },
         {
             "title": "Mobile Website Optimization",
-            "link": "Shakespeare and Company",
-            "github": "I just want to see if you're going to Dissolve into molecules.",
+            "link": "http://neo0rabie.github.io/frontend-nanodegree-mobile-portfolio/",
+            "github": "https://github.com/neo0rabie/frontend-nanodegree-mobile-portfolio",
             "imgSrc": "images/udacity.png",
             "bp": ["Web Optimization", "Critical Rendering Path", "Optimize JavaScript Execution", "Simplify paint complexity and reduce paint areas"],
             "description": "A Mobile Portfolio, Optimized to have a score of 96 in Google PageSpeed, and a framerate of 60hz for animation"
         },
         {
             "title": "Azm Technologies",
-            "link": "Shakespeare and Company",
-            "github": "I just want to see if you're going to Dissolve into molecules.",
+            "link": "http://www.azmtech.org/",
+            "github": "https://github.com/neo0rabie",
             "imgSrc": "images/azm.png",
             "status": "Under Development",
             "description": "AZM is an Innovative IT Saudi company That provides professional IT services in the Fields of networking infrastructure, Data Center and DRC solutions, Security, Software Development, Integration, Consultation and Manpower Supply."
@@ -58,7 +58,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "Minesweaper",
             "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
             "github": "Beginner",
-            "imgSrc": "img/scene01.jpg",
+            "imgSrc": "images/interative-design.svg",
             "status": "Under Development",
             "description": "1-A fair description of the scene and why you personally connect with it"
         },
@@ -66,7 +66,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "Frogger Arcade Game",
             "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
             "github": "Beginner",
-            "imgSrc": "img/scene01.jpg",
+            "imgSrc": "images/frogger.png",
             "status": "New",
             "description": "1-A fair description of the scene and why you personally connect with it"
         },
@@ -74,7 +74,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "title": "Rubik Cube",
             "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
             "github": "Beginner",
-            "imgSrc": "img/scene01.jpg",
+            "imgSrc": "images/interative-design.svg",
             "status": "Under Development",
             "description": "1-A fair description of the scene and why you personally connect with it"
         }]
@@ -210,7 +210,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         {
             "title": "Frogger",
-            "imgSrc": "img/scene01.jpg",
+            "imgSrc": "images/frogger.png",
             "link": "Add link here",
             "icon": "bug-report"
         },
@@ -251,7 +251,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     setTimeout(alignItem, 100);
     toggleSocialMenu();
     hideSocialMenu();
-    setTimeout(setHeight, 100);
   });
 
 
@@ -301,9 +300,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var maxheight =  Math.max.apply( Math, heights );
         //$('.subcat-item').height( maxheight);
         console.log("height changed" + maxheight);
-
     }
-    $(window).resize(setHeight);
 
 
   // See https://github.com/Polymer/polymer/issues/1381

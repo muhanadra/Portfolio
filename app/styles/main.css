@@ -152,8 +152,9 @@ body {
     display: inline-block;
 }
 
-.hidden {
-	display: none;
+.inline {
+	display: inline-flex;
+  margin: 0 24px;
 }
 
 .col-3 {
@@ -166,4 +167,8 @@ ol, ul {
 
 .status {
   margin-bottom: 10px;
+}
+
+.margin-bottom {
+  margin: 0 0 20px 0;
 }

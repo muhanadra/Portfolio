@@ -75,7 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <paper-toolbar id="drawerToolbar">
           <div class="profile-pic" flex horizental></div>
           <div>
-            <div class="appname">Muhanad Rabie</div>
+            <div class="">Muhanad Rabie</div>
             <div class="subtitle">Front-end Developer</div>
           </div>
 
@@ -190,6 +190,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <h2 class="item-title">{{item.title}}</h2>
                     <div class="status"><span class="label label-default">{{item.status}}</span></div>
                     <p>{{item.description}}</p>
+                    <div class="links center">
+                      <a href$="{{item.github}}" target="_blank"><iron-icon icon="socialmedia:github" class="mdx-icon"></iron-icon></a>
+                      <a href$="{{item.link}}" target="_blank"><iron-icon icon="link" class="mdx-icon"></iron-icon></a>
+                    </div>
                   </paper-material>
                 </div>
               </template>
@@ -199,6 +203,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Services</h2></div>
               <paper-material elevation="1">
                 <h3>Page is under development, Click <a href=''>Here</a> to go back the home page.</h3>
+              </paper-material>
+            </section>
+
+            <section data-route="about" class="row">
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>About Me</h2></div>
+              <paper-material elevation="0" class="center">
+                  <img src="images/profile-pic.jpg" class="img-circle" width="150">
+                  <h2 class="appname">Muhanad Rabie</h2>
+                  <h3 class="subtitle margin-bottom">Front End Developer</h3>
+                  <div>
+                    <p>Los Angeles based Front-end Developer who strives to show his love of web in his work. I believe coding is a super power that anyone can acquire. I'm passionate about Internet privacy and security and with a special interest in education</p>
+                    <p>I'm also a part time teacher, who in his spare time loves to teach himself new progamming languages and algorithms</p>
+                  </div>
               </paper-material>
             </section>
 
@@ -219,10 +236,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div class="col-md-4">
                   <paper-material elevation="1" class="subcat-item">
 
-                    <img width="128" class="center" src="images/interative-design.svg">
+                    <img width="128" class="center" src$="{{item.imgSrc}}">
                     <h2 class="item-title">{{item.title}}</h2>
                     <div class="status"><span class="label label-default">{{item.status}}</span></div>
                     <p>{{item.description}}</p>
+                    <div class="links center">
+                      <a href$="{{item.github}}" target="_blank"><iron-icon icon="socialmedia:github" class="mdx-icon"></iron-icon></a>
+                      <a href$="{{item.link}}" target="_blank"><iron-icon icon="link" class="mdx-icon"></iron-icon></a>
+                    </div>
                   </paper-material>
                 </div>
               </template>
@@ -253,13 +274,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </template>
             </section>
 
-            <section data-route="contact">
-              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Contact</h2></div>
-              <paper-material elevation="1">
-                <h2 class="paper-font-display2">Contact</h2>
-                <p>This is the contact section</p>
-                <span class="cc-symbol cc-symbol-icon-php cc-symbol-icon--large"></span>
+            <section data-route="contact" class="row">
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2 class="paper-font-display2">Contact</h2></div>
+              <div class="center">
+              <paper-material elevation="0">
+                  <img src="images/profile-pic.jpg" class="img-circle" width="150">
+                  <h2 class="appname">Muhanad Rabie</h2>
+                  <h3 class="subtitle margin-bottom">Front End Developer</h3>
               </paper-material>
+              </div>
+              <div class="contact-nfo">
+                <div class="col-md-4 center ">
+                  <paper-material elevation="0" class="">
+                    <paper-item>
+                     <paper-item-body three-line class="center">
+                        <iron-icon icon="communication:phone" class="md-icon"></iron-icon>
+                        <div><a href="callto://+15627872205"></a>+1-562-787-2205</div>
+                        <div secondary>Phone</div>
+                      </paper-item-body>
+                    </paper-item>
+                  </paper-material>
+                </div>
+                <div class="col-md-4 center">
+                  <paper-material elevation="0" class="">
+                    <paper-item>
+                     <paper-item-body three-line class="center">
+                        <iron-icon icon="mail" class="md-icon"></iron-icon>
+                        <div><a href="mailto:muhanadrabie@gmail.com" alt="send me an email">muhanadrabie@gmail.com</a></div>
+                        <div secondary>Email</div>
+                      </paper-item-body>
+                    </paper-item>
+                  </paper-material>
+                </div>
+                <div class="col-md-4 center">
+                  <paper-material elevation="0" class="">
+                    <paper-item>
+                     <paper-item-body three-line class="center">
+                        <iron-icon icon="socialmedia:skype" class="md-icon"></iron-icon>
+                        <div><a href="skypeto:Muhanadrabie?chat">Muhanadrabie</a></div>
+                        <div secondary>Skype</div>
+                      </paper-item-body>
+                    </paper-item>
+                  </paper-material>
+                </div>
             </section>
 
           </iron-pages>
