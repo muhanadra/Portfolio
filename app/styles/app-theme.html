@@ -33,7 +33,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     --disabled-text-color: #bdbdbd;
     --divider-color: #B6B6B6;
 
-
     /* Components */
 
     /* paper-drawer-panel */
@@ -314,19 +313,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     margin-left: 48px;
   }
 
-  #mainToolbar.has-shadow .middle {
+
+ /* #mainToolbar.has-shadow .middle {*/
+
+  #mainToolbar:not(.tall) .middle {
+
     font-size: 20px;
     padding-bottom: 0;
     margin-left: 48px;
   }
 
+  #mainToolbar .bottom {
+    transition: 0.18s opacity 0.18s ease-in;
+    opacity: 1;
+  }
+
+  #mainToolbar:not(.tall) .bottom {
+    transition: 0.18s opacity ease-in;
+    opacity: 0;
+  }
+
   /* Height of the scroll area */
-  /*.content {
+  .content {
     height: 900px;
-  }*/
+  }
 
   /* Breakpoints */
-  /* Extra Small */
 
   /* Small */
   @media (max-width: 600px) {
@@ -360,7 +372,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
   }
-   @media (max-width: 364px) {
+
+  @media (max-width: 364px) {
     .appname {
       font-size: 18px;
       text-overflow: ellipsis;
@@ -418,6 +431,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
    */
+
 
 /* mobile-small */
 @media all and (min-width: 0px) and (max-width: 360px) and (orientation: portrait) { }

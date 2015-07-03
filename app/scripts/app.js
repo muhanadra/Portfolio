@@ -306,12 +306,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         console.log("height changed" + maxheight);
     }
 
-
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {
     // imports are loaded and elements have been registered
   });
-
 
   // Close drawer after menu item is selected if drawerPanel is narrow
   app.onMenuSelect = function() {
