@@ -20,10 +20,7 @@ var merge = require('merge-stream');
 var path = require('path');
 var fs = require('fs');
 var glob = require('glob');
-<<<<<<< HEAD
-=======
 var historyApiFallback = require('connect-history-api-fallback');
->>>>>>> upstream/master
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
