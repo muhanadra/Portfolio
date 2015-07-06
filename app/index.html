@@ -193,7 +193,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <div class="col-md-6">
                   <paper-material elevation="1" class="subcat-item min-height">
                     <img width="128" class="center" src$="{{item.imgSrc}}">
-                    <h2 class="item-title">{{item.title}}</h2>
+                    <a href$="{{item.href}}"><h2 class="item-title">{{item.title}}</h2></a>
                     <div class="status"><span class="label label-default">{{item.status}}</span></div>
                     <p>{{item.description}}</p>
                     <div class="links center">
@@ -205,24 +205,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </template>
             </section>
 
+            <section data-route="project-info" class="row subcat-list">
+              <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Project-info</h2></div>
+              <paper-material elevation="1">
+                <h2 class="paper-font-display2">
+                Project:<span>{{params.title}}</span>
+                </h2>
+                <div>This is <span>{{params.title}}</span>'s section</div>
+              </paper-material>
+            </section>
+
+
+
             <section data-route="services" class="">
               <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Services</h2></div>
               <paper-material elevation="1">
-                <h3>Page is under development, Click <a href='/'>Here</a> to go back the home page.</h3>
+                <h5>Page is under development, Click <a href='/'>Here</a> to go back the home page.</h5>
               </paper-material>
             </section>
 
             <section data-route="blog" class="">
               <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Blog Posts</h2></div>
               <paper-material elevation="1">
-                <h3>No blog posts yet!</h3>
+                <h5>No blog posts yet!</h5>
               </paper-material>
             </section>
 
             <section data-route="frogger" class="">
               <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Frogger</h2></div>
               <paper-material elevation="1">
-                <h3>Do you want to play, Click <a href='http://neo0rabie.github.io/frontend-nanodegree-arcade-game/'>Here</a> to play frogger.</h3>
+                <h4>Do you want to play, Click <a href='http://neo0rabie.github.io/frontend-nanodegree-arcade-game/'>Here</a> to play frogger.</h4>
                 <!-- <iframe width="800" height="600" src="http://neo0rabie.github.io/frontend-nanodegree-arcade-game/"></iframe> -->
               </paper-material>
             </section>
@@ -302,6 +314,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   <img src="images/profile-pic.jpg" class="img-circle" width="150">
                   <h2 class="appname">Muhanad Rabie</h2>
                   <h3 class="subtitle margin-bottom">Front End Developer</h3>
+                  <div class="social-contact-wrapper inline">
+                    <div class="social-contact inline"><a class="custom-link" href="https://www.github.com/neo0rabie" target="_blank"><span title="Check my Github repositories"><iron-icon  class="contact-icons"  icon="socialmedia:github"></iron-icon></span></a></div>
+                    <div class="social-contact inline"><a class="custom-link" href="https://www.linkedin.com/in/muhanadabdalla" target="_blank"><span title="Visit my Linkedin profile"><iron-icon  class="contact-icons" icon="socialmedia:linkedin"></iron-icon></span></a></div>
+                    <div class="social-contact inline"><a class="custom-link" href="https://jsfiddle.net/user/neo0rabie/" target="_blank"><span title="Share your code"><iron-icon  class="contact-icons"icon="socialmedia:jsfiddle"></iron-icon></span></a></div>
+                    <div class="social-contact inline"><a class="custom-link" href="mailto:Muhanadrabie@gmail.com"><span title="Send me an email"><iron-icon class="contact-icons" icon="mail"></iron-icon></span></a></div>
+                    <!-- <li class="social-icons"><a class="custom-link" href="https://www.twitter.com/" target="_blank"><iron-icon  icon="socialmedia:twitter"></iron-icon></a></li> -->
+                  </div>
               </paper-material>
               </div>
               <div class="contact-nfo">

@@ -14,6 +14,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     {
       "projects": [{
             "title": "Feedreader Unit Testing",
+            "url": "/projects/feedreader-unit-testing",
             "link": "http://neo0rabie.github.io/frontend-nanodegree-feedreader/",
             "github": "https://github.com/neo0rabie/frontend-nanodegree-feedreader",
             "imgSrc": "images/feedreader.png",
@@ -22,6 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         {
             "title": "Filming locations",
+            "url": "/projects/filming-locations",
             "link": "http://neo0rabie.github.io/neighborhood-map/",
             "github": "https://github.com/neo0rabie/eighborhood-map/",
             "imgSrc": "images/location.png",
@@ -30,6 +32,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         {
             "title": "Frogger Arcade Game",
+            "url": "/projects/frogger-arcade-game",
             "link": "http://neo0rabie.github.io/frontend-nanodegree-arcade-game/",
             "github": "https://github.com/neo0rabie/frontend-nanodegree-arcade-game",
             "imgSrc": "images/frogger.png",
@@ -38,6 +41,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         {
             "title": "Mobile Website Optimization",
+            "url": "/projects/mobile-website-optimization",
             "link": "http://neo0rabie.github.io/frontend-nanodegree-mobile-portfolio/",
             "github": "https://github.com/neo0rabie/frontend-nanodegree-mobile-portfolio",
             "imgSrc": "images/udacity.png",
@@ -46,6 +50,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         {
             "title": "Azm Technologies",
+            "url": "/projects/azm-technologies",
             "link": "http://www.azmtech.org/",
             "github": "https://github.com/neo0rabie",
             "imgSrc": "images/azm.png",
@@ -56,24 +61,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     {
       "games": [{
             "title": "Minesweaper",
-            "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
+            "link": "http://neo0rabie.github.io/minesweaper",
             "github": "Beginner",
             "imgSrc": "images/interative-design.svg",
             "status": "Under Development",
-            "description": "1-A fair description of the scene and why you personally connect with it"
+            "description": "My version of the classic game created with Web components and Polymer and Material Design"
         },
         {
             "title": "Frogger Arcade Game",
-            "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
-            "github": "Beginner",
+            "link": "http://neo0rabie.github.io/frontend-nanodegree-arcade-game/",
+            "github": "https://github.com/neo0rabie/frontend-nanodegree-arcade-game",
             "imgSrc": "images/frogger.png",
             "status": "New",
-            "description": "1-A fair description of the scene and why you personally connect with it"
+            "description": "A remake of the classic arcade game to test my skills in Object Oriented Programming as part of Udacity Front-end nano-degree program"
         },
         {
             "title": "Rubik Cube",
-            "link": "Rue Saint-Julien le Pauvre 75005 Paris, France",
-            "github": "Beginner",
+            "link": "http://neo0rabie.github.io/",
+            "github": "https://github.com/neo0rabie/",
             "imgSrc": "images/interative-design.svg",
             "status": "Under Development",
             "description": "1-A fair description of the scene and why you personally connect with it"
@@ -86,7 +91,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Very Good",
             "class": "cc-symbol cc-symbol-icon-javascript",
             "imgSrc": "img/javascript.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "You can't call yourself a front-end developer without javascript, or can you? Good news is Javascript is fairly easy to pick up. the trick is to focus on best practices and design patterns best suited for the problem which is what I try to focus on"
         },
         {
             "title": "HTML5",
@@ -290,10 +295,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   setTimeout(alignItem, 100);
   $(window).resize(alignItem);
-  page('/', function () {
-      app.route = 'home';
-      alignItem();
-  });
 
     // Make sure all .sub-item have the same height
     function setHeight() {
