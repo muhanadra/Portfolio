@@ -117,7 +117,7 @@ body {
 .cc-symbol-icon-apis:before {
     content: "\e611"
 }
-
+/* TODO Change the target element to a class*/
 .fa {
   padding: 27px;
 }
@@ -158,10 +158,6 @@ body {
 	display: inline-flex;
 }
 
-.col-3 {
-  width: 31.33333%;
-}
-
 ol, ul {
   margin: 0;
 }
@@ -193,3 +189,9 @@ p {
   margin-top: 20px;
 }
 
+.subcat-item p {
+  line-height: 25px;
+  height: 75px;
+  overflow: hidden;
+  color: initial;
+}

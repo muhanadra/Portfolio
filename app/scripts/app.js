@@ -259,8 +259,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.addEventListener('dom-change', function() {
     console.log('Our app is ready to rock!');
     setTimeout(alignItem, 100);
-    toggleSocialMenu();
-    hideSocialMenu();
     $('.page-header #ink').removeClass('circle');
 
   });
@@ -285,7 +283,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   setTimeout(alignItem, 100);
   $(window).resize(alignItem);
   // TODO Use position absolute and remove alignItem function
-  setInterval(alignItem, 1000);
+  setInterval(alignItem, 500);
 
 
   // Remove .circle class from paper-button-icon paper-ripple
