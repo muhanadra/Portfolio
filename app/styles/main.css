@@ -165,6 +165,10 @@ body {
 ol, ul {
   margin: 0;
 }
+p {
+  max-width: 580px;
+  margin: auto;
+}
 
 .status {
   margin-bottom: 10px;

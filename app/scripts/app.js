@@ -265,24 +265,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   });
 
-
-  function toggleSocialMenu() {
-    $('.toggle-social').on('touchstart click', function(){
-        console.log('icon clicked!');
-        $('.social-wrapper').toggle();
-      });
-  }
-
-  function hideSocialMenu() {
-    if ($('.social-icons').css('display') == 'block') {
-      $('.social-wrapper').hide();
-    }
-    else {
-      $('.social-wrapper').show();
-    }
-  }
-  $(window).resize(hideSocialMenu);
-
   var alignItem = function() {
     var targetedItem = '.category-item:nth-child(7)';
     var regItem = '.category-item:nth-child(2)';
@@ -302,6 +284,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   setTimeout(alignItem, 100);
   $(window).resize(alignItem);
+  // TODO Use position absolute and remove alignItem function
+  setInterval(alignItem, 1000);
 
 
   // Remove .circle class from paper-button-icon paper-ripple
