@@ -14,7 +14,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     {
       "projects": [{
             "title": "Feedreader Unit Testing",
-            "url": "/projects/feedreader-unit-testing",
+            "url": "/projects/feedreader unit testing",
             "link": "http://neo0rabie.github.io/frontend-nanodegree-feedreader/",
             "github": "https://github.com/neo0rabie/frontend-nanodegree-feedreader",
             "imgSrc": "images/feedreader.png",
@@ -81,7 +81,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "github": "https://github.com/neo0rabie/",
             "imgSrc": "images/interative-design.svg",
             "status": "Under Development",
-            "description": "1-A fair description of the scene and why you personally connect with it"
+            "description": "Experiencing with three.js liberary, the 3D javascript liberary."
         }]
     },
     {
@@ -91,7 +91,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Very Good",
             "class": "cc-symbol cc-symbol-icon-javascript",
             "imgSrc": "img/javascript.jpg",
-            "description": "You can't call yourself a front-end developer without javascript, or can you? Good news is Javascript is fairly easy to pick up. the trick is to focus on best practices and design patterns best suited for the problem which is what I try to focus on"
+            "description": "You can't call yourself a front-end developer without javascript, or can you? Not quiet the js ninja yet but I am getting there."
         },
         {
             "title": "HTML5",
@@ -99,7 +99,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Very Good",
             "class": "cc-symbol cc-symbol-icon-html",
             "imgSrc": "img/html.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "More semantic elements and awesome APIs, what's not to love."
         },
         {
             "title": "CSS3",
@@ -107,7 +107,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Very Good",
             "class": "cc-symbol cc-symbol-icon-css",
             "imgSrc": "img/css3.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "The main tool against native apps, and also clean and nice styling is nice don't you think?"
         },
         {
             "title": "PHP",
@@ -115,7 +115,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Beginner",
             "class": "cc-symbol cc-symbol-icon-php",
             "imgSrc": "img/php.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "A lot of tutorials and some experience with developing Drupal modules and manipulating Wordpress templates."
         },
         {
             "title": "Python",
@@ -123,15 +123,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Beginner",
             "class": "cc-symbol cc-symbol-icon-python",
             "imgSrc": "img/python.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "Just started learning Python as part of Udacity Full-stack Nano degree Program. Have I told you I love Udacity?"
         },
         {
             "title": "Polymer",
             "Year": "2014",
             "level": "Good",
             "icon": "polymer",
+            "ironClass": "lg-icon",
             "imgSrc": "img/polymer.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "Web components and future of the of web, I believe early adopters have a lot to gain."
         },
         {
             "title": "Angular JS",
@@ -139,7 +140,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Good",
             "imgIcon": "images/angularjs.svg",
             "imgSrc": "images/angularjs.svg",
-            "description": "Celine give Jesse the finger"
+            "description": "The Rock star of JS libraries, with such a huge base of users and support nothing much can go wrong."
         },
         {
             "title": "Drupal",
@@ -147,7 +148,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Very Good",
             "class": "fa fa-drupal",
             "imgSrc": "img/drupal.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "My Content Management, or framework, of choice. All the early sites I build was with Drupal and I owe its community a lot for their help and support."
         },
         {
             "title": "Git",
@@ -155,31 +156,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             "level": "Good",
             "class": "fa fa-git-square",
             "imgSrc": "img/git.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "Developing was a nightmare till I discovered Git, I've no idea how people can live without it."
         },
         {
             "title": "Gulp",
             "Year": "2014",
             "level": "Good",
-            "imgIcon": "images/gulp.svg",
-            "imgSrc": "img/git.jpg",
-            "description": "Celine give Jesse the finger"
+            "icon": "socialmedia:gulp",
+            "ironClass": "lgx-icon",
+            "description": "Building tools are the SDK of web developments. which do make it harder for beginners but the benefits are just too great to pass."
         },
         {
             "title": "Adobe Illustrator",
-            "Year": "2014",
+            "Year": "2010",
             "level": "Good",
-            "imgIcon": "images/illustrator.svg",
+            "icon": "socialmedia:illustrator",
+            "ironClass": "lgx-icon",
             "imgSrc": "img/git.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "I know the basics to get by. create my svgs and play around with vectors."
         },
         {
             "title": "Adobe Photoshop",
             "Year": "2006",
             "level": "Very Good",
-            "imgIcon": "images/photoshop.svg",
+            "icon": "socialmedia:photoshop",
+            "ironClass": "lgx-icon",
             "imgSrc": "img/photoshop.jpg",
-            "description": "Celine give Jesse the finger"
+            "description": "The greatest piece of software. OK maybe not the greatest but a great tool to have in your belt non the less."
         }]
     },
     {
@@ -245,6 +248,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   app.skills = myData[2]['skills'];
   app.home =  myData[3]['home'];
 
+  app.isOpen = false;
+
   app.displayInstalledToast = function() {
     document.querySelector('#caching-complete').show();
   };
@@ -256,11 +261,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     setTimeout(alignItem, 100);
     toggleSocialMenu();
     hideSocialMenu();
+    $('.page-header #ink').removeClass('circle');
+
   });
 
 
   function toggleSocialMenu() {
-    $('.toggle-social').on('click', function(){
+    $('.toggle-social').on('touchstart click', function(){
         console.log('icon clicked!');
         $('.social-wrapper').toggle();
       });
@@ -296,16 +303,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   setTimeout(alignItem, 100);
   $(window).resize(alignItem);
 
-    // Make sure all .sub-item have the same height
-    function setHeight() {
-        var heights = [];
-        $('.subcat-item').each(function () {
-            heights.push($(this).height());
-        });
-        var maxheight =  Math.max.apply( Math, heights );
-        //$('.subcat-item').height( maxheight);
-        console.log("height changed" + maxheight);
-    }
+
+  // Remove .circle class from paper-button-icon paper-ripple
+
 
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {
