@@ -32,7 +32,7 @@ body {
 
 .cc-symbol {
   font-family: 'cc-symbol';
-  font-style: initial;
+  font-style: normal;
 }
 .cc-symbol-icon-heavycheck:before {
     content: "\e612"
