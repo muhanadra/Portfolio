@@ -85,12 +85,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     display: -ms-flexbox;
     display: -webkit-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     padding: 8px 0 0 8px;
     background-color: #3C3C3C;
   }
 
   .item {
+    min-width: 50px;
+    width: 96%;
     width: calc(100% - 8px);
+    width: calc(100% - 8px);
+    height: 96%;
     height: calc(100% - 8px);
     position: relative;
     padding: 0px;
@@ -99,6 +104,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .item-title {
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: inline-flex;
   }
   .icon-larger {
@@ -106,6 +113,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     height: 75%;
     margin: auto;
     align-items: center;
+    display: -webkit-flex;
+    display: inline-flex;
     display: flex;
   }
   .lg-icon {
@@ -163,6 +172,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     background-color: rgba(176, 176, 176, 0.55);
     position: absolute;
     bottom: 0;
+    display: -webkit-flex;
+    display: inline-flex;
     display: flex;
     width: 100%;
     padding: 0;
@@ -557,6 +568,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     transform: scale(1.2,1.2);
   }*/
   .category-item {
+    width: 50%;
     width: calc(50%);
     position: relative;
     padding: 0px;
@@ -566,6 +578,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /* desktop-small */
 @media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) {
   .category-item {
+    width: 50%;
     width: calc(50%);
     position: relative;
     padding: 0px;
@@ -575,7 +588,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /* desktop-medium-landscape */
 @media all and (min-width: 841px) and (max-width: 1280px) and (min-aspect-ratio: 4/3) {
   .category-item {
+
+    width: 16.666666666666668%;
     width: calc(100% / 6);
+    height: 33.333333333333333%;
     height: calc(100% / 3);
     position: relative;
     padding: 0px;
@@ -583,10 +599,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .category-item:nth-child(1), .category-item:nth-child(4), .category-item:nth-child(7) {
+    height: 66.66666666666667%;
     height: calc(100% / 3 * 2);
+    width: 33.333333333333333%
     width: calc(100%/3);
   }
   .category-item:nth-child(8) {
+    width: 33.333333333333333%
     width: calc(100%/3);
   }
   .category-item paper-material:hover {
@@ -600,7 +619,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /* desktop-medium */
 @media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) {
   .category-item {
+    width: 16.666666666666668%;
     width: calc(100% / 6);
+    height: 33.333333333333333%;
     height: calc(100% / 3);
     position: relative;
     padding: 0px;
@@ -608,7 +629,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .category-item:nth-child(1), .category-item:nth-child(4), .category-item:nth-child(7) {
+    height: 66.66666666666667%;
     height: calc(100% / 3 * 2);
+    width: 33.333333333333333%;
     width: calc(100%/3);
   }
 
@@ -624,7 +647,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /* desktop-large */
 @media all and (min-width: 1281px) and (max-width: 1600px) {
   .category-item {
+    width: 16.666666666666668%;
     width: calc(100% / 6);
+    height: 33.33333333333333%;
     height: calc(100% / 3);
     position: relative;
     padding: 0px;
@@ -632,10 +657,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .category-item:nth-child(1), .category-item:nth-child(4), .category-item:nth-child(7) {
+    height: 66.66666666666667%;
     height: calc(100% / 3 * 2);
+    width: 33.33333333333333%;
     width: calc(100%/3);
   }
   .category-item:nth-child(8) {
+    width: 33.33333333333333%;
     width: calc(100%/3);
   }
   .category-item paper-material:hover {
@@ -649,7 +677,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /* desktop-xlarge */
 @media all and (min-width: 1601px) and (min-width: 1920px) {
   .category-item {
+    width: 16.666666666666668%;
     width: calc(100% / 6);
+    height: 33.33333333333333%;
     height: calc(100% / 3);
     position: relative;
     padding: 0px;
@@ -657,10 +687,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .category-item:nth-child(1), .category-item:nth-child(4), .category-item:nth-child(7) {
+    height: 66.66666666666667%;
     height: calc(100% / 3 * 2);
+    width: 33.33333333333333%;
     width: calc(100%/3);
   }
   .category-item:nth-child(8) {
+    width: 33.3333333%;
     width: calc(100%/3);
   }
   .category-item paper-material:hover {

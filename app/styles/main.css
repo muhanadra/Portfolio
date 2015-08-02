@@ -141,7 +141,7 @@ body {
   float: left;
   vertical-align: top;
   width: 100%;
-  height: 224px;
+  min-height: 224px;
   will-change: transform;
 }
 
@@ -172,6 +172,13 @@ p {
 
 .margin-bottom {
   margin: 0 0 20px 0;
+}
+
+.page-header {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
 }
 
 .page-header > h2 {

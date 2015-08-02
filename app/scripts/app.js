@@ -285,10 +285,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // TODO Use position absolute and remove alignItem function
   setInterval(alignItem, 500);
 
-
-  // Remove .circle class from paper-button-icon paper-ripple
-
-
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {
     // imports are loaded and elements have been registered
