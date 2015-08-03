@@ -77,6 +77,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     .full {
+      min-height: 190px;
+      width: 100%;
+      height: 100%;
       width: calc(100% - 4px);
       height: calc(100% - 4px);
       background-color: var(--default-primary-color);
@@ -93,7 +96,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: inline-block;
         float: left;
         vertical-align: top;
-        width: calc(100%);
+        min-height: 200px;
+        width: 100%;
         margin-bottom: 4px;
       }
 
@@ -107,15 +111,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: inline-block;
         float: left;
         vertical-align: top;
+        width: 50%;
+        height: 50%;
         width: calc(50%);
         height: calc(50%);
       }
     }
     @media all and (min-width: 841px) {
       .tile {
+        position: relative;
         display: inline-block;
         float: left;
         vertical-align: top;
+        width: 16.66666666666667%;
+        height: 33.333333333333334%;
         width: calc(100% / 6);
         height: calc(100% / 3);
         flex:1;
@@ -126,27 +135,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .tile:nth-of-type(1) {
+        width: 33.333333333333334%;
+        height: 66.66666666666667%;
         width: calc(100% / 3);
         height: calc(100% / 3 * 2);
       }
 
       .tile:nth-of-type(4) {
+        width: 33.333333333333334%;
+        height: 66.66666666666667%;
         width: calc(100% / 3);
         height: calc(100% / 3 * 2);
       }
 
       .tile:nth-of-type(7) {
+        width: 33.333333333333334%;
+        height: 66.66666666666667%;
         width: calc(100% / 3);
         height: calc(100% / 3 * 2);
         position: absolute;
+        top: 33.333333333333334%;
         top: calc(100% / 3 );
+        top: -webkit-calc(100% / 3 );
+        left: 33.333333333333334%;
         left: calc(100% / 3);
+        left: -webkit-calc(100% / 3);
       }
 
       .tile:nth-of-type(8) {
+        width: 33.333333333333334%;
+        height: 33.333333333333334%;
         width: calc(100% / 3);
         height: calc(100% / 3);
         position: absolute;
+        left: 66.66666666666667%;
         left: calc(100% / 3 * 2);
         bottom: 0;
       }
