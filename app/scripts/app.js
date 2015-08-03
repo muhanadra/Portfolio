@@ -258,32 +258,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // have resolved and content has been stamped to the page
   app.addEventListener('dom-change', function() {
     console.log('Our app is ready to rock!');
-    setTimeout(alignItem, 100);
+    // setTimeout(alignItem, 100);
     $('.page-header #ink').removeClass('circle');
 
   });
 
-  var alignItem = function() {
-    var targetedItem = '.category-item:nth-child(7)';
-    var regItem = '.category-item:nth-child(2)';
-    var itemH = $(targetedItem).height();
-    var itemReg = $(regItem).height();
+  // var alignItem = function() {
+  //   var targetedItem = '.category-item:nth-child(7)';
+  //   var regItem = '.category-item:nth-child(2)';
+  //   var itemH = $(targetedItem).height();
+  //   var itemReg = $(regItem).height();
 
-    if (itemH == itemReg ) {
-      $(targetedItem).css('top', 0);
-      $('.category-list').css('overflow', 'auto');
-    }
-    else {
-      var verticalLift = $(targetedItem).height() / -2;
-      $(targetedItem).css('top', verticalLift);
-      $('.category-list').scrollTop( 0 );
-      $('.category-list').css('overflow', 'hidden');
-    }
-  };
-  setTimeout(alignItem, 100);
-  $(window).resize(alignItem);
-  // TODO Use position absolute and remove alignItem function
-  setInterval(alignItem, 500);
+  //   if (itemH == itemReg ) {
+  //     $(targetedItem).css('top', 0);
+  //     $('.category-list').css('overflow', 'auto');
+  //   }
+  //   else {
+  //     var verticalLift = $(targetedItem).height() / -2;
+  //     $(targetedItem).css('top', verticalLift);
+  //     $('.category-list').scrollTop( 0 );
+  //     $('.category-list').css('overflow', 'hidden');
+  //   }
+  // };
+  // setTimeout(alignItem, 100);
+  // $(window).resize(alignItem);
+  // // TODO Use position absolute and remove alignItem function
+  // setInterval(alignItem, 500);
 
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {

@@ -178,24 +178,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <!-- <neon-animated-pages > -->
               <!-- id="pages" selected="0" class="x-scope neon-animated-pages-0" -->
               <div class="category-list">
-              <template is="dom-repeat" items="{{home}}">
-                <div class="category-item">
-                  <paper-material elevation="0" class="item wide custom-color {{item}} " layout vertical flex>
-                    <iron-icon icon="{{item.icon}}" class="icon-larger"></iron-icon>
-                    <paper-button>
-                        <a class="custom-link" href="{{item.title}}">
-                          <div class="category-info">
-                            <h3 class="category-title">{{item.title}}</h3>
-                            <span class="flex"></span>
-                            <paper-icon-button icon="arrow-forward" class="action-button"></paper-icon-button>
-                            <paper-ripple></paper-ripple>
-                            <p>{{item.description}}</p>
-                          </div>
-                        </a>
-                    </paper-button>
-                  </paper-material>
-                </div>
-              </template>
+                <cat-tile></cat-tile>
               </div>
              <!--  </neon-animated-pages> -->
             </section>
@@ -273,7 +256,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="frogger" class="">
               <div class="page-header"><a href="./"><paper-icon-button icon="arrow-back" alt="back to home page"></paper-icon-button></a><h2>Frogger</h2></div>
               <paper-material elevation="1">
-                <h4>Do you want to play, Click <a href='http://neo0rabie.github.io/frontend-nanodegree-arcade-game/' target="_blank">Here</a> to play frogger.</h4>
+                <h4>Do you want to play, Click <a href='http://neo0rabie.github.io/frontend-nanodegree-arcade-game/' target="_blank">Here</a> to play frogger. Note that it does not work on touch screes, arrows are required! Sorry!</h4>
                 <!-- <iframe width="800" height="600" src="http://neo0rabie.github.io/frontend-nanodegree-arcade-game/"></iframe> -->
               </paper-material>
             </section>
