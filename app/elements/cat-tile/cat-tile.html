@@ -73,7 +73,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      margin: auto;
+      margin: 0 auto;
     }
 
     .full {
@@ -90,7 +90,75 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           -ms-flex-direction: column;
               flex-direction: column;
     }
+    /* Colors */
 
+    .tile:nth-child(1) paper-material .tile-info {
+      background-color: #009688;
+      color: #fff;
+    }
+
+    .tile:nth-child(1) paper-material {
+      color: #009688;
+      transform-origin: top left;
+    }
+
+    .tile:nth-child(2) paper-material .tile-info {
+      background-color: #00BCD4;
+      color: #fff;
+    }
+
+    .tile:nth-child(2) {
+      color: #00BCD4;
+    }
+
+    .tile:nth-child(3) paper-material .tile-info {
+      background-color: #03A9F4;
+      color: #fff;
+    }
+
+    .tile:nth-child(3) {
+      color: #03A9F4;
+    }
+    .tile:nth-child(4) paper-material .tile-info {
+      background-color: #2196F3;
+      color: #fff;
+    }
+    .tile:nth-child(4) paper-material {
+      color: #2196F3;
+      transform-origin: top right;
+    }
+    .tile:nth-child(5) paper-material .tile-info {
+      background-color: #536DFE;
+      color: #fff;
+    }
+    .tile:nth-child(5) paper-material {
+      color: #536DFE;
+      transform-origin: bottom left;
+    }
+    .tile:nth-child(6) paper-material .tile-info {
+      background-color: #F44336;
+      color: #fff;
+    }
+    .tile:nth-child(6) paper-material {
+      color: #F44336;
+      transform-origin: bottom;
+    }
+    .tile:nth-child(7) paper-material .tile-info {
+      background-color: #D32F2F;
+      color: #fff;
+    }
+    .tile:nth-child(7) paper-material {
+      color: #D32F2F;
+      transform-origin: bottom;
+    }
+    .tile:nth-child(8) paper-material .tile-info {
+      background-color: #FF9800;
+      color: #fff;
+    }
+    .tile:nth-child(8) paper-material {
+      color: #FF9800;
+      transform-origin: bottom right;
+    }
     @media all and (max-width: 481px) {
       .tile {
         display: inline-block;
@@ -98,7 +166,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         vertical-align: top;
         min-height: 110px;
         width: 100%;
-        margin-bottom: 4px;
+        margin: 4px;
       }
 
       .tile-info {
@@ -106,12 +174,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .icon-larger {
-        width: 70px;
-        height: 70px;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        margin: auto;
+        width: 140px;
+        height: 140px;
       }
     }
     /* Medium View*/
