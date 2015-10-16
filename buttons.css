@@ -1,34 +1,42 @@
-.button {
-  border-radius: 25px;
-  height: 45px;
-  min-width: 160px;
-  font-size: 18px;
-  padding: 2px 25px 0 25px;
-  cursor: pointer;
-}
+		.button {
+		  border-radius: 25px;
+		  height: 45px;
+		  min-width: 160px;
+		  font-size: 18px;
+		  padding: 2px 25px 0 25px;
+		  cursor: pointer;
+		}
 
-.button:focus {
-  outline: none;
-}
+		.button:focus {
+		  outline: none;
+		}
 
-.button-light {
-  color: #6a675e;
-  border: 1px solid #b2b2b3;
-  background: linear-gradient(0deg, #e8e7e1, #fcfbf7);
-}
+		.button-light {
+		  color: #6a675e;
+		  border: 1px solid #b2b2b3;
+		  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAtCAIAAAAY+W1kAAAANUlEQVQ4jWP88/s7A27AhEeOgYGB5f///6O6SdbNwIBPNwtes0d1YweDOb6Hru7BG99DVzcAB89BSo7Y0XIAAAAASUVORK5CYII=);
 
-.button-light:disabled {
-  color: #b4b3ae;
-  border: 1px solid #d8d8d9;
-  background: linear-gradient(0deg, #f5f4f2, #fcfbf9);
-}
+		  background: linear-gradient(0deg, #e8e7e1, #fcfbf7);
+		}
 
-.button-dark {
-  color: white;
-  border: none;
-  background: linear-gradient(0deg, #0098f7, #66c1ff);
-}
+		.button-light:disabled {
+		  color: #b4b3ae;
+		  border: 1px solid #d8d8d9;
+		  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAtCAIAAAAY+W1kAAAALElEQVQ4jWP88/snA27AhEeOYmmW////D5Tdoy6nv92jHsMKRl1Of+mBdDkAxwsYQyRfJdcAAAAASUVORK5CYII=);
 
-.button-dark:disabled {
-  background: linear-gradient(0deg, #7fcbfb, #b2e0ff);
-}
+		  background: linear-gradient(0deg, #f5f4f2, #fcfbf9);
+		}
+
+		.button-dark {
+		  color: white;
+		  border: none;
+		  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAtCAIAAAAY+W1kAAAAQ0lEQVQ4jWNMO/ifATdg+YdPloHlL37pf/9pajgl0n/xyVLqchp7DK/TaBtqA+lyfLLDOaXS0uUDGt/4NA9ul1NiOADNp19Bv8n3DQAAAABJRU5ErkJggg==);
+
+		  background: linear-gradient(0deg, #0098f7, #66c1ff);
+		}
+
+		.button-dark:disabled {
+		  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAtCAIAAAAY+W1kAAAARUlEQVQ4jWPc9OA/A27Agk+SgYHlP155Qrr/UaT7P17LB7fLB043QZfjD9SB9Dd+6UEdJXgDdVC7HK/0wLqckuw/gC4HAKxuR/dw1C6TAAAAAElFTkSuQmCC);
+
+		  background: linear-gradient(0deg, #7fcbfb, #b2e0ff);
+		}
